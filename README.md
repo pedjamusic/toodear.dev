@@ -3,7 +3,7 @@
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
-# 1 Too Dear Rocks 🤘🤘🏻🤘🏼🤘🏽🤘🏾🤘🏿
+<h1>Too Dear Rocks 🤘🤘🏻🤘🏼🤘🏽🤘🏾🤘🏿</h1>
 <p align="center">using</p>
 <h2 align="center">
   Gatsby minimal starter
