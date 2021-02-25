@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Too Dear",
+    title: "Too Dear"
   },
   plugins: [
     // "gatsby-plugin-styled-components",

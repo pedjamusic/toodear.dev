@@ -1,31 +1,29 @@
-import React from "react"
+import React from "react";
+import { Link } from 'gatsby';
+import { siteMetadata } from "../../gatsby-config";
 
 export default function Home() {
   return (
     <div className="container">
-      <div class="flex items-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white mb-5">
-        <div class="theme-switcher">
-            <button class="theme-switcher-button theme-switcher-light bg-gray-200 border-gray-200 border-2 dark:bg-black dark:border-black p-2 focus:outline-none" title="Light"><i class="fas fa-sun pointer-events-none"></i> Light</button>
-            <button class="theme-switcher-button theme-switcher-dark bg-gray-200 border-gray-200 border-2 dark:bg-black dark:border-black p-2 focus:outline-none" title="Dark"><i class="fas fa-moon pointer-events-none"></i> Dark</button>
-            <button class="theme-switcher-button theme-switcher-auto bg-gray-200 border-gray-200 dark:bg-black border-2 dark:border-black p-2 focus:outline-none" title="Auto"><i class="fas fa-adjust pointer-events-none"></i> Auto</button>
-        </div>
-      </div>
-      <header>
-        <h1>Hello world!</h1>
-      </header>
+      <hgroup>
+        <h1>{siteMetadata.title} <span className="text-secondary-text text-sm">Logo coming soon</span></h1>
+        <h2>All your new media needs pro bono. <span className="text-gradient bg-gradient-to-r from-accent to-accent-secondary">That rocks!</span> <span role="img" aria-label="Rocking and rocket emojis">🤘🏻🚀</span></h2>
+      </hgroup>
       <article>
-        <header>
-          <h2>Lorem ipsum dolor sit amet.</h2>
-        </header>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed <a href="#test" title="Primary color example.">laborum nobis distinctio</a> quisquam vitae quidem dolorem pariatur ratione, soluta doloremque <strong>amet fuga nemo facilis</strong> debitis unde accusantium animi ad hic!</p>
-        <footer className="mt-8 grid grid-flow-col grid-rows-2 grid-cols-3 gap-4">
-          <div className="p-4 bg-white rounded-xl shadow-lg flex items-center justify-center">Test 1.</div>
-          <div className="col-start-2 row-start-1 col-span-2 pt-full bg-white rounded-xl shadow-lg flex items-center justify-center">2nd To All!</div>
-          <div className="pt-full bg-white rounded-xl shadow-lg flex items-center justify-center">The Third.</div>
-          <div className="pt-full bg-white rounded-xl shadow-lg flex items-center justify-center">Four Four.</div>
-          <div className="pt-full bg-white rounded-xl shadow-lg flex items-center justify-center">The End?</div>
-        </footer>
+        <p>You can check <Link to="/rich-index/">the original page</Link> for the chosen GatsbyJS starter. <span className="text-secondary-text">(I should have gone with the hello-world <span role="img" aria-label="Annoyed emoji">😒</span>)</span></p>
+        <p>Apart from usual Lorem Ipsum stuff, creator of these zeroes and ones is struggling to get grips on React, graphQL, Gatsby and all other mumbo-jumbo.</p>
       </article>
+      <footer>
+          <h3>Meanwhile, elsewhere...</h3>
+          <ul className="mb-4">
+            <li><Link to="https://www.instagram.com/toodearrocks/">Instagram</Link></li>
+            <li><Link to="https://www.youtube.com/channel/UCckHUaxAIzg5BTm8fYNgRQA">Youtube</Link></li>
+            <li><Link to="https://soundcloud.com/pedjamusic">Soundcloud</Link></li>
+            <li><Link to="https://www.facebook.com/iampedja">Facebook</Link></li>
+          </ul>
+          <p className="text-secondary-text">Copyright & copyleft from 2006. to 2021. by Predrag Drljača.</p>
+        </footer>
     </div>
-  )
+  );
 }
