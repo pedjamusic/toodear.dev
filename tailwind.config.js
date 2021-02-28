@@ -22,7 +22,7 @@ module.exports = {
       boxShadow: {
         // link: 'inset 0 -0.3333333333em 0 0 var(--accent)'
         link: 'inset 0 -0.25em 0 0 #0088cc'
-      }
+      },
     },
     fontFamily: {
       // sans: ['Fira\\ Sans', ...defaultTheme.fontFamily.sans],
