@@ -1,6 +1,9 @@
+const tailwindcss = require('tailwindcss')
+
 module.exports = {
   siteMetadata: {
-    title: "Too Dear"
+    title: "Too Dear",
+    description: "All your new media needs pro bono."
   },
   plugins: [
     // "gatsby-plugin-styled-components",

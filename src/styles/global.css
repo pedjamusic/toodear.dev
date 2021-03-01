@@ -1,44 +1,32 @@
-/* FONTS OF CHOICE */
 
-/* Fira Sans & Alegreya using https://github.com/fontsource/fontsource via npm */
-
-/* TAILWINDCSS */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* TOODEAR.ROCKS SPEFICS STYLES */
 
-:root {
-    --accent: #0088cc;
-    --accent-secondary: #c214cc;
+.container :last-child {
+    @apply mb-8;
 }
-
-@layer utilities {
-    .text-gradient {
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    :last-child {
-        @apply mb-8;
-    }
+.text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 html {
-    @apply border-t-8 bg-primary;
-    border-image: linear-gradient(90deg, var(--accent) 20%, var(--accent-secondary)) 1;
+    @apply border-t-8;
+    border-image: linear-gradient(90deg, var(--color-primary) 20%, var(--color-secondary)) 1;
 }
 body {
-    font-family: "Alegreya", sans-serif;
-    @apply p-8 w-full text-main-text;
+    font-family: "Alegreya", serif;
+}
+
+.container {
+    @apply p-8;
 }
 
 a {
     @apply shadow-link text-black;
 }
 a:hover {
-    @apply text-accent;
+    @apply text-color-primary;
 }
 
 h1, h2, h3, h4, h5, h6 {

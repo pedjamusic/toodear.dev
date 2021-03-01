@@ -1,0 +1,30 @@
+/* FONTS */
+
+/* Fira Sans & Alegreya using https://github.com/fontsource/fontsource via npm */
+
+
+
+/* COLORS */
+
+:root {
+    --color-primary: #0088cc;
+    --color-secondary: #c214cc;
+    --color-black: #0d0106;
+    --color-white: #f3f3fa;
+    --color-gray: #454e56;
+    --color-light-gray: #e9e9ef;
+    --color-danger: #ff4646;
+    --color-success: #89d144;
+    --color-warning: #ffaa4b;
+    --color-bg: var(--color-white);
+    --color-text: var(--color-black);
+    --color-card: var(--color-light-gray);
+    --color-footer: var(--color-light-gray);
+}
+
+[data-theme='dark'] {
+    --color-bg: var(--color-black);
+    --color-text: var(--color-white);
+    --color-card: var(--color-black);
+    --color-footer: var(--color-black);
+}
