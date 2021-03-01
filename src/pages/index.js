@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 // const HomePage = ({data}) => {
 export default function Home({data}) {
   return (
-    <div className="container w-full xl:w-7/12">
+    <div className="container">
       <header>
         <h1>{data.site.siteMetadata.title} <span className="text-sm text-color-gray">Logo coming soon</span></h1>
         <h2>{data.site.siteMetadata.description}
