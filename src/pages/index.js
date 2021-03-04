@@ -21,15 +21,28 @@ export default function Home({data}) {
           <span className="text-gradient bg-gradient-to-r from-color-primary to-color-secondary">
           That rocks!</span> <span role="img" aria-label="Rocking and rocket emojis">🤘🏻🚀</span></h1>
         </section>
-        <section className="row">
-          <article>
-            <h3>Pro bono? <span role="img" aria-label="surprised face with open mouth emoji">😮</span></h3>
-            <p><strong>Yep.</strong></p>
-            <h3>How &amp; why? <span role="img" aria-label="Thinking face emoji">🤔</span></h3>
-            <p>I am learning new things like Gatsbyjs, React <span className="text-color-gray">(not gonna happen)</span>, graphQL, JAMstack, etc. and would love to help someone help me. <span role="img" aria-label="Smiling empoji">😀</span></p>
-            <p>Apart from usual Lorem Ipsum stuff, creator of these zeroes and ones is struggling to get grips on React, graphQL, Gatsby and all other mumbo-jumbo.</p>
-          </article>
-        </section>
+        <article className="introduction">
+          <div className="lg:w-1/3 p-8">
+            <h3>About.</h3>
+            <p>Hello! I am <strong>web</strong> and <strong>entertainment</strong> enthusiast based in Sombor, Serbia.</p>
+          </div>
+          <div className="lg:w-1/3 p-8">
+            <h3>Goal.</h3>
+            <p>I like to design beautyful &amp; unique websites and user interfaces using accessibility and usability guidelines for rich user experience.</p>
+          </div>
+          <div className="lg:w-1/3 p-8">
+            <h3>Availability.</h3>
+            <p>I'm available for work, at the moment.</p>
+            <p><Link className="" to="/">Get in touch!</Link><br /><span className="text-base text-color-gray">(currently, dead link <span role="img" aria-label="Skull emoji">💀</span>)</span></p>
+          </div>
+        </article>
+        <article className="row">
+          <h3>Pro bono? <span role="img" aria-label="surprised face with open mouth emoji">😮</span></h3>
+          <p><strong>Yep.</strong></p>
+          <h3>How &amp; why? <span role="img" aria-label="Thinking face emoji">🤔</span></h3>
+          <p>I am learning new things like Gatsbyjs, React <span className="text-color-gray">(not gonna happen)</span>, graphQL, JAMstack, etc. and would love to help someone help me. <span role="img" aria-label="Smiling empoji">😀</span></p>
+          <p>Apart from usual Lorem Ipsum stuff, creator of these zeroes and ones is struggling to get grips on React, graphQL, Gatsby and all other mumbo-jumbo.</p>
+        </article>
       </main>
       <footer className="row">
         <h3>Meanwhile, elsewhere...</h3>

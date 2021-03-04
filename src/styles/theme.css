@@ -13,9 +13,9 @@
     --color-white: #faf8ff;
     --color-gray: #4e4556;
     --color-light-gray: #e9e5ef;
-    --color-danger: #ff4646;
+    --color-danger: #e53a40;
     --color-success: #89d144;
-    --color-warning: #ffaa4b;
+    --color-warning: #efdc05;
     --color-bg: var(--color-white);
     --color-text: var(--color-black);
     --color-card: var(--color-light-gray);

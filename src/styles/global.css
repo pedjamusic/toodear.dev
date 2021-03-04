@@ -16,9 +16,9 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-main :last-child {
+/* main :last-child {
     @apply mb-16;
-}
+} */
 
 a {
     /* @apply shadow-link text-black; */
@@ -59,9 +59,8 @@ strong {
 
 .row {
     @apply
-        mt-24 lg:mt-40
-        mx-auto
-        p-8 lg:px-0;
+        mt-24 mx-auto p-8
+        lg:px-0 lg:mt-40;
     max-width: 44rem;
 }
 
@@ -93,4 +92,11 @@ nav.mainnav li a:hover {
 }
 .siteDesc {
     margin-bottom: 0 !important;
+}
+
+.introduction {
+    @apply
+        mx-auto mt-24 max-w-2xl
+        lg:flex lg:w-4/5 lg:max-w-full lg:mt-40;
+    align-items: stretch;
 }
