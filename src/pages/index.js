@@ -1,25 +1,37 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 
 // const HomePage = ({data}) => {
 export default function Home({data}) {
   return (
-    <div className="container">
-      <header>
-        <h1>{data.site.siteMetadata.title} <span className="text-sm text-color-gray">Logo coming soon</span></h1>
-        <h2>{data.site.siteMetadata.description}
-        <br />
-        <span className="text-gradient bg-gradient-to-r from-color-primary to-color-secondary">
-        That rocks!</span> <span role="img" aria-label="Rocking and rocket emojis">🤘🏻🚀</span></h2>
-      </header>
-      <article>
-        <h3>Pro bono?</h3>
-        <p><strong>Yep.</strong> To be explained in detail when I type a nice do's and don'ts.</p>
-        <h3>How &amp; with what?</h3>
-        <p>I am learning new things like Gatsbyjs, React <span className="text-color-gray">(not gonna happen)</span>, graphQL, JAMstack, etc. and would love to help someone help me. <span role="img" aria-label="Smiling empoji">😀</span></p>
-        <p>Apart from usual Lorem Ipsum stuff, creator of these zeroes and ones is struggling to get grips on React, graphQL, Gatsby and all other mumbo-jumbo.</p>
-      </article>
-      <footer>
+    <div>
+      <nav className="mainnav row">
+        <Link to="/"className="siteTitle">I am {data.site.siteMetadata.title}.</Link>
+        <ul>
+          <li><Link to="#">Link 1</Link></li>
+          <li><Link to="#">Link 2</Link></li>
+          <li><Link to="#">Link 3</Link></li>
+        </ul>
+      </nav>
+      <main>
+        <section className="row">
+          <h1 className="siteDesc">{data.site.siteMetadata.description}
+          <br />
+          <span className="text-gradient bg-gradient-to-r from-color-primary to-color-secondary">
+          That rocks!</span> <span role="img" aria-label="Rocking and rocket emojis">🤘🏻🚀</span></h1>
+        </section>
+        <section className="row">
+          <article>
+            <h3>Pro bono? <span role="img" aria-label="surprised face with open mouth emoji">😮</span></h3>
+            <p><strong>Yep.</strong></p>
+            <h3>How &amp; why? <span role="img" aria-label="Thinking face emoji">🤔</span></h3>
+            <p>I am learning new things like Gatsbyjs, React <span className="text-color-gray">(not gonna happen)</span>, graphQL, JAMstack, etc. and would love to help someone help me. <span role="img" aria-label="Smiling empoji">😀</span></p>
+            <p>Apart from usual Lorem Ipsum stuff, creator of these zeroes and ones is struggling to get grips on React, graphQL, Gatsby and all other mumbo-jumbo.</p>
+          </article>
+        </section>
+      </main>
+      <footer className="row">
         <h3>Meanwhile, elsewhere...</h3>
         <ul className="mb-4">
           <li><a href="https://www.instagram.com/toodearrocks/">Instagram</a></li>
