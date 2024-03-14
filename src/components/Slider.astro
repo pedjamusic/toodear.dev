@@ -1,0 +1,98 @@
+---
+import albumCover from "../images/1982-Cover.jpg";
+import singleCover from "../images/TMSE-Cover.jpg";
+import phoenixCover from "../images/Phoenix-Cover.jpg";
+
+import Slide from "./Slide.astro";
+---
+
+<section
+  class="splide row bg-gray-200 md:rounded-lg"
+  aria-label="Discography Carousel"
+  role="group"
+>
+  <div class="splide__track sm:max-w-prose sm:mx-auto">
+    <ul class="splide__list">
+      <Slide
+        imgsrc={albumCover}
+        imgalt="1982 album cover."
+        imgcaption="Album Cover of 1982"
+        title="On Album and The Dream."
+      >
+        <p>
+          It has been so long since this has been cooking. What started as an
+          experiment, a long time ago, finally got its form and focus.
+        </p>
+        <p>
+          <a
+            href="https://open.spotify.com/album/3C3O6l3PMIfiMaR75keH9l?si=f_Q5p0GnSgWZnyYfImvz2g"
+          >
+            Spotify
+          </a>,
+          <a href="https://music.apple.com/us/album/1982/1437045390">
+            Apple Music
+          </a>
+          , <a href="https://soundcloud.com/pedjamusic">et cetera</a>.
+        </p>
+      </Slide>
+      <Slide
+        imgsrc={singleCover}
+        imgalt="The Morning Sun Effect single cover."
+        imgcaption='Single Cover of "The Morning Sun Effect"'
+        title="Many Years Later."
+      >
+        <p>
+          On sunny, but chilly mornings, M-Audio Oxygen-25 was used to the
+          fullest of my limited musicality.
+        </p>
+        <p>
+          <a
+            href="https://open.spotify.com/track/0OZXD5j20a03GfKSUBl518?si=5935f9e062cd4b6d"
+          >
+            Spotify
+          </a>
+          ,{" "}
+          <a
+            href="https://music.apple.com/us/album/the-morning-sun-effect/1513451975?i=1513452126"
+          >
+            Apple Music
+          </a>
+          , <a href="https://soundcloud.com/pedjamusic">et cetera</a>.
+        </p>
+      </Slide>
+      <Slide
+        imgsrc={phoenixCover}
+        imgalt="Cover for single Phoenix"
+        imgcaption='Single Cover of "Phoenix"'
+        title="Fruitful Collaboration."
+      >
+        <p>
+          During seagoing times, a friendship was struck and collab was done.
+          This is a <abbr title="Free To Use Music">FTUM</abbr> song.
+        </p>
+        <p>
+          <a href="https://music.youtube.com/watch?v=lgGbJfZfu8Q&feature=share">
+            Youtube Music
+          </a>
+          ,{" "}
+          <a
+            href="https://soundcloud.com/pedjamusic/predrag-drljaca-phoenix-loop"
+          >
+            Soundcloud
+          </a>
+          , et cetera.
+        </p>
+      </Slide>
+    </ul>
+  </div>
+</section>
+
+<script>
+  import Splide from "@splidejs/splide";
+
+  import "@splidejs/splide/css";
+
+  new Splide(".splide", {
+    speed: 750,
+  }).mount();
+</script>

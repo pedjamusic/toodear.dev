@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import InfoBox from "../components/InfoBox";
+import Slider from "../components/Slider.astro";
+
+import { siteInfo } from "../data/siteMetadata.ts";
+---
+
+<Layout>
+  <main>
+    <section class="row">
+      <h1 class="siteDesc">{siteInfo.description}</h1>
+      <h2 class="lg:text-5xl text-4xl">
+        <span
+          class="text-gradient bg-gradient-to-r from-color-primary to-color-secondary"
+          >That rocks!</span
+        >
+        <span role="img" aria-label="Rocking and rocket emojis">🤘🏻🚀</span>
+      </h2>
+    </section>
+    <article
+      class="container mx-auto mt-24 lg:p-8 lg:flex lg:items-stretch lg:mt-40"
+    >
+      <InfoBox heading="About">
+        <p>
+          Hello! I am <strong>web</strong> and <strong>entertainment</strong>
+          enthusiast based in Sombor, Serbia.
+        </p>
+      </InfoBox>
+      <InfoBox heading="Goal">
+        <p>
+          I like to design beautiful &amp; unique websites and user interfaces
+          using accessibility and usability guidelines for rich user experience.
+        </p>
+      </InfoBox>
+      <InfoBox heading="Availability">
+        <p>I'm not available for work, at the moment.</p>
+        <p>
+          <a href="#">Get in touch!</a><br /><span
+            class="text-base text-color-gray"
+            >(currently, dead link <span role="img" aria-label="Skull emoji"
+              >💀</span
+            >)</span
+          >
+        </p>
+      </InfoBox>
+    </article>
+
+    <Slider />
+
+    <section class="row">
+      <h3>
+        Pro bono? <span
+          role="img"
+          aria-label="Surprised face with open mouth emoji">😮</span
+        >
+      </h3>
+      <p><strong>Yep.</strong></p>
+      <h3>
+        How &amp; why? <span role="img" aria-label="Thinking qface emoji"
+          >🤔</span
+        >
+      </h3>
+      <p>
+        I am learning new things like <a href="https://astro.build">AstroJS</a>,
+        React <span class="text-color-gray">(not gonna happen)</span>, graphQL
+        (nope), JAMstack, etc. and would love to help someone help me. <span
+          role="img"
+          aria-label="Smiling empoji">😀</span
+        >
+      </p>
+      <p>
+        Apart from usual Lorem Ipsum stuff, creator of these zeroes and ones is
+        struggling with above and all other mumbo-jumbo.
+      </p>
+    </section>
+  </main>
+</Layout>
