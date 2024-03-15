@@ -15,15 +15,16 @@
     "services": "brew services list"
   },
   "dependencies": {
+    "@astrojs/db": "^0.8.5",
     "@astrojs/mdx": "^2.2.0",
     "@astrojs/react": "^3.1.0",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/fira-sans": "^5.0.12",
     "@fontsource/rubik": "^5.0.19",
     "@splidejs/splide": "^4.0.0",
-    "@types/react": "^18.2.65",
+    "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "astro": "^4.5.2",
+    "astro": "^4.5.4",
     "blaze-slider": "^1.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
