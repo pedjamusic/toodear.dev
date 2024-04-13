@@ -1,14 +1,13 @@
 ---
 import { siteInfo } from "../data/siteMetadata.ts";
-import navItems from "../data/navItems.ts";
+import navigation from "../data/navigation.ts";
 ---
 
 <nav class="mainnav row">
   <a href="/" class="siteTitle">I am {siteInfo.title}.</a>
   <ul>
-    <li class="text-gray-400">Links inactive :(</li>
     {
-      navItems.map((i) => (
+      navigation.map((i) => (
         <li>
           <a href={i.href}>{i.title}</a>
         </li>

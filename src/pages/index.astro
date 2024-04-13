@@ -1,24 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import InfoBox from "../components/InfoBox";
+import Hero from "../components/Hero.astro";
+import InfoBox from "../components/InfoBox.astro";
 import Slider from "../components/Slider.astro";
-
-import { siteInfo } from "../data/siteMetadata.ts";
 ---
 
 <Layout>
   <main>
-    <section class="row">
-      <h1 class="siteDesc">{siteInfo.description}</h1>
-      <h2 class="lg:text-5xl text-4xl">
-        <span
-          class="text-gradient bg-gradient-to-r from-color-primary to-color-secondary"
-          >That rocks!</span
-        >
-        <span role="img" aria-label="Rocking and rocket emojis">🤘🏻🚀</span>
-      </h2>
-    </section>
+    <Hero />
     <article
       class="container mx-auto mt-24 lg:p-8 lg:flex lg:items-stretch lg:mt-40"
     >
@@ -30,17 +20,19 @@ import { siteInfo } from "../data/siteMetadata.ts";
       </InfoBox>
       <InfoBox heading="Goal">
         <p>
-          I like to design beautiful &amp; unique websites and user interfaces
-          using accessibility and usability guidelines for rich user experience.
+          I <abbr title="past tense">liked</abbr> to design beautiful &amp; unique
+          websites, user interfaces using accessibility &amp; usability guidelines
+          for rich user experience.
         </p>
       </InfoBox>
       <InfoBox heading="Availability">
-        <p>I'm not available for work, at the moment.</p>
+        <p>I'm <i>kind of</i> not available for work, at the moment.</p>
         <p>
-          <a href="#">Get in touch!</a><br /><span
+          <a href="/contact">Get in touch!</a><br /><span
             class="text-base text-color-gray"
-            >(currently, dead link <span role="img" aria-label="Skull emoji"
-              >💀</span
+            >(currently, nothing to see there <span
+              role="img"
+              aria-label="Skull emoji">💀</span
             >)</span
           >
         </p>
