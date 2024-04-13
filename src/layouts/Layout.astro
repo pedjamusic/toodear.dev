@@ -1,6 +1,4 @@
 ---
-import SpeedInsights from "@vercel/speed-insights/astro";
-
 import "@fontsource/rubik/400.css";
 import "@fontsource/rubik/700.css";
 import "@fontsource/fira-sans/400.css";
@@ -13,9 +11,11 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Header />
-<body>
-  <slot />
-  <Footer />
-  <SpeedInsights />
-</body>
+<!doctype html>
+<html lang="en">
+  <Header />
+  <body>
+    <slot />
+    <Footer />
+  </body>
+</html>
