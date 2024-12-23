@@ -1,4 +1,14 @@
 ---
+import { Image } from "astro:assets";
+
+import { dependencies } from "../../package.json";
+import astroLogo from "../images/astro-logo-dark.svg";
+
+var astroVersion = dependencies.astro;
+while (astroVersion.charAt(0) === "^") {
+  astroVersion = astroVersion.substring(1);
+}
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -21,6 +31,14 @@ const currentYear = new Date().getFullYear();
     </li>
   </ul>
   <p class="text-base text-color-gray">
-    Copyright &amp; copyleft from 2006. to {currentYear} by Predrag Drljača.
+    Copyright &amp; copyleft from 2006. to {currentYear} by Predrag Drljača.<br
+    />
+    Made with <span role="img" aria-label="suffering emoji">🥵</span> &amp; <span
+      role="img"
+      aria-label="heart emoji">❤️</span
+    > using <a href="https://astro.build" title="Link to AstroJS website"
+      ><Image src={astroLogo} alt="AstroJS logo" class="inline size-20" /></a
+    >
+    {astroVersion}.
   </p>
 </footer>
