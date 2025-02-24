@@ -15,21 +15,21 @@
     "services": "brew services list"
   },
   "dependencies": {
-    "@astrojs/db": "^0.14.5",
-    "@astrojs/mdx": "^4.0.3",
-    "@astrojs/react": "^4.1.2",
-    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/db": "^0.14.6",
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/tailwind": "^6.0.0",
     "@fontsource/fira-sans": "^5.1.1",
     "@fontsource/rubik": "^5.1.1",
     "@splidejs/splide": "^4.1.4",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
-    "@vercel/speed-insights": "^1.1.0",
-    "astro": "^5.1.2",
-    "mongodb": "^6.12.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vercel/speed-insights": "^1.2.0",
+    "astro": "^5.3.1",
+    "mongodb": "^6.13.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.33.5",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.0.8"
   }
 }
