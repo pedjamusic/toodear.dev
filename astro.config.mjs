@@ -1,9 +1,14 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+/* import tailwind from "@astrojs/tailwind"; */
+import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), mdx()],
+  /* integrations: [tailwind(), react(), mdx()], */
+  integrations: [react(), mdx()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
