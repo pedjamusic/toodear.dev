@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
 	content: [
@@ -10,21 +10,6 @@ export default {
 	// darkMode: 'class', // or 'false' or 'media'
 	theme: {
 		extend: {
-			colors: {
-        'color-primary': 'var(--color-primary)',
-        'color-secondary': 'var(--color-secondary)',
-        'color-black': 'var(--color-black)',
-        'color-white': 'var(--color-white)',
-        'color-gray': 'var(--color-gray)',
-        'color-light-gray': 'var(--color-light-gray)',
-        'color-danger': 'var(--color-danger)',
-        'color-success': 'var(--color-success)',
-        'color-warning': 'var(--color-warning)',
-        'color-bg': 'var(--color-white)',
-        'color-text': 'var(--color-black)',
-        'color-card': 'var(--color-light-gray)',
-        'color-footer': 'var(--color-light-gray)'
-      },
       boxShadow: {
         // link: 'inset 0 -0.3333333333em 0 0 var(--accent)'
         link: 'inset 0 -0.1em 0 0 var(--color-primary)',
