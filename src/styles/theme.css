@@ -16,6 +16,7 @@
   --color-danger: #e53a40;
   --color-success: #89d144;
   --color-warning: #efdc05;
+  --color-highlight: hsl(55, 97%, 88%);
 
   /* Theme variables that map to utilities */
   --color-bg: var(--color-white);

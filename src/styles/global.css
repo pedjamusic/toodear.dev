@@ -5,15 +5,39 @@
 
 :root {
     color-scheme: light dark;
-}
-html {
-    @apply w-full;
-}
-body {
-    @apply border-t-8 bg-bg text-text;
-    border-image: linear-gradient(90deg, var(--color-primary) 20%, var(--color-secondary)) 1;
     /* font-family: "Alegreya", serif; */
     font-family: "Rubik", sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    /* @apply border-t-8 bg-bg text-text; */
+    
+}
+html {
+    /* @apply w-full; */
+}
+body {
+    border-top: 8px;
+    border-image: linear-gradient(90deg, var(--color-primary) 20%, var(--color-secondary)) 1;
+}
+
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr [shackless-start] 1fr [greatness-start] 48rem [greatness-end] 1fr [shackless-end] 2fr;
+}
+.content-grid > * {
+    grid-column: greatness;
+}
+.shackless {
+    grid-column: shackless;
+}
+.grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(33%, 1fr)); */
+    gap: 1rem;
+    @media (width >= 64rem) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 /* UTILITIES */
@@ -28,7 +52,7 @@ body {
 
 a {
     /* @apply shadow-link text-black; */
-    color: black;
+    color: var(--color-text);
     text-decoration: underline;
     text-decoration-color: var(--color-primary);
     text-decoration-thickness: .25rem;
@@ -43,38 +67,69 @@ abbr:hover {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Fira Sans", sans-serif;
-    @apply font-bold text-black;
+    font-weight: 700;
+    color: var(--color-text);
+    /* @apply font-bold text-black; */
 }
 h1 {
 }
 h2 {
 }
 h3 {
-    @apply lg:text-3xl text-2xl;
+    font-size: 1.5rem;
+    line-height: 1.33;
+    @media (width >= 64rem) {
+        font-size: 1.875rem;
+        line-height: 1.2;
+    }
+    /* @apply lg:text-3xl text-2xl; */
 }
 p, li {
-    @apply text-xl mb-6;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    /* @apply text-xl mb-6; */
 }
 li {
-    @apply mb-1;
+    margin-bottom: 0.25rem;
+    /* @apply mb-1; */
 }
 strong {
-    @apply bg-yellow-100;
+    background-color: var(--color-highlight)
+    /* @apply bg-yellow-100; */
 }
 
 /* HAVING-HARD-TIME-NAMING-THINGS */
-
+.max-width {
+    max-width: 48rem;
+}
+.center {
+    margin-inline: auto;
+}
 .row {
-    @apply
+    /* padding: 2rem; */
+    /* @media (width >= 64rem) {
+        padding: 0;
+    } */
+    /* @apply
         mt-24 mx-auto p-8
         lg:px-0 lg:mt-40
-        max-w-3xl;
+        max-w-3xl; */
 }
-
-nav.mainnav {
-    margin: 0 auto;
-    @apply
-        lg:px-0;
+.breathe {
+    margin-top: 6rem;
+    @media (width >= 64rem) {
+        margin-top: 10rem;
+    }
+}
+nav {
+    /* margin: 0 auto; */
+    /* max-width: 48rem; */
+    /* @media (width >= 64rem) {
+        padding-inline: 0;
+    } */
+    /* @apply
+        lg:px-0; */
 }
 a.siteTitle {
     @apply
@@ -86,7 +141,7 @@ nav ul {
 }
 nav li {
     flex-wrap: wrap;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: inline-flex;
     margin-left: 1rem;
     @apply text-base
