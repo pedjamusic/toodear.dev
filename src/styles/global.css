@@ -12,18 +12,23 @@
     /* @apply border-t-8 bg-bg text-text; */
     
 }
-html {
-    /* @apply w-full; */
-}
+
 body {
-    border-top: 8px;
+    border-top-width: 8px;
     border-image: linear-gradient(90deg, var(--color-primary) 20%, var(--color-secondary)) 1;
+    padding: 2rem;
+    @media (min-width: 64rem) {
+        padding: 0;
+    }
 }
 
 
 .content-grid {
     display: grid;
-    grid-template-columns: 2fr [shackless-start] 1fr [greatness-start] 48rem [greatness-end] 1fr [shackless-end] 2fr;
+    grid-template-columns: 1fr [shackless-start] 1fr [greatness-start] 48rem [greatness-end] 1fr [shackless-end] 1fr;
+    @media (max-width: 64rem) {
+        grid-template-columns: 1fr;
+    }
 }
 .content-grid > * {
     grid-column: greatness;
@@ -46,9 +51,6 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-/* main :last-child {
-    @apply mb-16;
-} */
 
 a {
     /* @apply shadow-link text-black; */
@@ -100,41 +102,33 @@ strong {
 }
 
 /* HAVING-HARD-TIME-NAMING-THINGS */
-.max-width {
+.limit-width {
     max-width: 48rem;
 }
 .center {
     margin-inline: auto;
 }
 .row {
-    /* padding: 2rem; */
-    /* @media (width >= 64rem) {
+    padding: 2rem 0;
+    @media (max-width: 64rem) {
         padding: 0;
-    } */
+    }
     /* @apply
         mt-24 mx-auto p-8
         lg:px-0 lg:mt-40
         max-w-3xl; */
 }
 .breathe {
-    margin-top: 6rem;
-    @media (width >= 64rem) {
-        margin-top: 10rem;
+    margin-top: 8rem;
+    @media (min-width: 64rem) {
+        margin-top: 16rem;
     }
 }
-nav {
-    /* margin: 0 auto; */
-    /* max-width: 48rem; */
-    /* @media (width >= 64rem) {
-        padding-inline: 0;
-    } */
-    /* @apply
-        lg:px-0; */
-}
+
 a.siteTitle {
     @apply
         w-1/3
-        text-lg font-bold; 
+        text-lg font-bold;
 }
 nav ul {
     float: right;
@@ -146,10 +140,10 @@ nav li {
     margin-left: 1rem;
     @apply text-base
 }
-nav.mainnav li a {
+nav li a {
     text-decoration: none;
 }
-nav.mainnav li a:hover {
+nav li a:hover {
     color: var(--color-secondary);
 }
 
