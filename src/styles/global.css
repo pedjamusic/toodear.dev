@@ -156,7 +156,7 @@ strong {
     border-radius: .5rem;
 }
 .text-gradient {
-    background-clip: text;
+    background: text linear-gradient(to right, var(--color-primary) 20%, var(--color-secondary) 80%);
     -webkit-text-fill-color: transparent;
 }
 .slider {
@@ -164,7 +164,7 @@ strong {
 }
 
 a.siteTitle {
-    @apply
-        w-1/3
-        text-lg font-bold;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-weight: 700;
 }

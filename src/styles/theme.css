@@ -9,20 +9,21 @@
 @theme {
   --color-primary: hsl(200, 100%, 40%); /* #0088cc */
   --color-secondary: hsl(297, 82%, 44%); /* #c214cc */
-  --color-black: hsl(270, 26%, 9%); /* #17111d */
-  --color-white: hsl(257, 100%, 99%);/* #faf8ff */
-  --color-gray: hsl(272, 11%, 30%);/* #4e4556 */
-  --color-light-gray: hsl(264, 24%, 92%);/* #e9e5ef */
-  --color-red: hsl(358, 77%, 56%);/* #e53a40 */
-  --color-green: hsl(91, 61%, 54%);/* #89d144 */
-  --color-yellow: hsl(55, 96%, 48%);/* #efdc05 */
-  --color-highlight: hsl(55, 97%, 88%);/* #fef9c3 */
+  --color-black: hsl(297 26% 5%); /* #100910 */
+  --color-white: hsl(200, 98%, 98%); /* #fef5ff */
+  --color-gray: hsl(200, 11%, 30%); /* #4e4556 */
+  --color-light-gray: hsl(200, 24%, 92%); /* #e9e5ef */
+  --color-red: hsl(358, 77%, 56%); /* #e53a40 */
+  --color-green: hsl(91, 61%, 54%); /* #89d144 */
+  --color-yellow: hsl(55, 96%, 48%); /* #efdc05 */
+  --color-highlight: hsl(55, 96%, 88%); /* #fef9c3 */
 
   /* Theme variables that map to utilities */
   --color-bg: var(--color-white);
   --color-text: var(--color-black);
   --color-card: var(--color-light-gray);
-  --color-footer: var(--color-light-gray);}
+  --color-footer: var(--color-light-gray);
+}
 
 [data-theme='dark'] {
     --color-bg: var(--color-black);
