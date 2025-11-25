@@ -4,11 +4,11 @@ import { Image } from "astro:assets";
 const { imgsrc, imgalt, imgcaption, title } = Astro.props;
 ---
 
-<li class="splide__slide sm:p-0 sm:flex">
-  <div class="sm:w-1/3">
+<li class="splide__slide slide sm:p-0">
+  <div class="slide__image">
     <figure class="p-2">
       <Image
-        class="rounded-lg shadow-md shadow-slate-500"
+        class="rounded-corners shadow-md shadow-slate-500"
         src={imgsrc}
         alt={imgalt}
       />
@@ -17,7 +17,7 @@ const { imgsrc, imgalt, imgcaption, title } = Astro.props;
       </figcaption>
     </figure>
   </div>
-  <div class="sm:w-2/3 px-0 sm:pl-8 pt-8 sm:pt-0">
+  <div class="slide__text">
     <h3>{title}</h3>
     <slot />
   </div>
