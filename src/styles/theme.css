@@ -1,22 +1,31 @@
 /* FONTS */
 
 /* Fira Sans & Alegreya using https://github.com/fontsource/fontsource via npm */
-/* Rubik Light
-
+/* Rubik Light */
 
 /* COLORS */
 
-@theme {
-  --color-primary: hsl(200, 100%, 40%); /* #0088cc */
-  --color-secondary: hsl(297, 82%, 44%); /* #c214cc */
-  --color-black: hsl(297 26% 5%); /* #100910 */
-  --color-white: hsl(200, 98%, 98%); /* #fef5ff */
-  --color-gray: hsl(200, 11%, 30%); /* #4e4556 */
-  --color-light-gray: hsl(200, 24%, 92%); /* #e9e5ef */
-  --color-red: hsl(358, 77%, 56%); /* #e53a40 */
-  --color-green: hsl(91, 61%, 54%); /* #89d144 */
-  --color-yellow: hsl(55, 96%, 48%); /* #efdc05 */
-  --color-highlight: hsl(55, 96%, 88%); /* #fef9c3 */
+:root {
+  --color-primary: oklch(0.5998 0.1412 241.55);
+  /* Lochmara #0088cc */
+  --color-secondary: oklch(0.5821 0.263 325.56);
+  /* Pink Flamingo #c214cc (may clip on non-wide gamut displays due to high chroma value) */
+  --color-black: oklch(0.153 0.0187 326.44);
+  /* Woodsmoke #100910 */
+  --color-white: oklch(0.98 0.0162 322.69);
+  /* Magnolia #fef5ff */
+  --color-gray: oklch(0.4209 0.007 229.4);
+  /* Abbey #4a4e50 */
+  --color-light-gray: oklch(0.9279 0.014 304.13);
+  /* Prim #e9e5ef */
+  --color-red: oklch(0.6105 0.207 24.2);
+  /* Alizarin Crimson #e53a40 (may clip on non-wide gamut displays due to high chroma value) */
+  --color-green: oklch(0.7856 0.1861 132.59);
+  /* Atlantis #89d144 (borderline clipping on non-wide gamut displays due to borderline chroma value) */
+  --color-yellow: oklch(0.8822 0.185 103.15);
+  /* Turbo #efdc05 (borderline clipping on non-wide gamut displays due to borderline chroma value) */
+  --color-highlight: oklch(0.9729 0.0693 103.19);
+  /* Lemon Chiffon #fef9c3 */
 
   /* Theme variables that map to utilities */
   --color-bg: var(--color-white);
@@ -25,15 +34,15 @@
   --color-footer: var(--color-light-gray);
 }
 
-[data-theme='dark'] {
-    --color-bg: var(--color-black);
-    --color-text: var(--color-white);
-    --color-card: var(--color-black);
-    --color-footer: var(--color-black);
+[data-theme="dark"] {
+  --color-bg: var(--color-black);
+  --color-text: var(--color-white);
+  --color-card: var(--color-black);
+  --color-footer: var(--color-black);
 }
 
-[data-theme='coffee'] {
-    --color-bg: #fdd692;
-    --color-text: #754f44;
-    --color-link: #1f2124;
+[data-theme="coffee"] {
+  --color-bg: #fdd692;
+  --color-text: #754f44;
+  --color-link: #1f2124;
 }

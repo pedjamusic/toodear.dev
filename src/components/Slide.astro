@@ -4,15 +4,15 @@ import { Image } from "astro:assets";
 const { imgsrc, imgalt, imgcaption, title } = Astro.props;
 ---
 
-<li class="splide__slide slide sm:p-0">
+<li class="splide__slide slide">
   <div class="slide__image">
-    <figure class="p-2">
+    <figure class="padding-h-sm">
       <Image
         class="rounded-corners shadow-md shadow-slate-500"
         src={imgsrc}
         alt={imgalt}
       />
-      <figcaption class="text-xs ml-2 mt-2 sm:hidden text-gray-400">
+      <figcaption class="text-gray-400">
         {imgcaption}
       </figcaption>
     </figure>
