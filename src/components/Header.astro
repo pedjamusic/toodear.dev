@@ -1,8 +1,4 @@
 ---
-import SpeedInsights from "@vercel/speed-insights/astro";
-
-import Navbar from "./Navbar.astro";
-
 import { siteInfo } from "../data/siteMetadata.ts";
 ---
 
@@ -30,7 +26,4 @@ import { siteInfo } from "../data/siteMetadata.ts";
   <link rel="canonical" href="https://toodear.rocks" />
   <meta name="generator" content={Astro.generator} />
   <title>{siteInfo.title}</title>
-  <SpeedInsights />
 </head>
-
-<Navbar />

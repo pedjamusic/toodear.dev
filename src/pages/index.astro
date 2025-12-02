@@ -7,41 +7,43 @@ import Slider from "../components/Slider.astro";
 ---
 
 <Layout>
-  <main>
+  <main class="content-grid">
+
     <Hero />
-    <article
-      class="container mx-auto mt-24 lg:p-8 lg:flex lg:items-stretch lg:mt-40"
-    >
-      <InfoBox heading="About">
-        <p>
-          Hello! I am <strong>web</strong> and <strong>entertainment</strong>
-          enthusiast based in Sombor, Serbia.
-        </p>
-      </InfoBox>
-      <InfoBox heading="Goal">
-        <p>
-          I <abbr title="sadly, past tense 😢">liked</abbr> to design beautiful &amp;
-          unique websites, user interfaces using accessibility &amp; usability guidelines
-          for rich user experience.
-        </p>
-      </InfoBox>
-      <InfoBox heading="Availability">
-        <p>I'm <i>kind of</i> not available for work, at the moment.</p>
-        <p>
-          <a href="/contact">Get in touch!</a><br /><span
-            class="text-base text-color-gray"
-            >(currently, nothing to see there <span
-              role="img"
-              aria-label="Skull emoji">💀</span
-            >)</span
-          >
-        </p>
-      </InfoBox>
-    </article>
+
+    <section class="shackless breathe">
+      <div class="grid">
+        <InfoBox heading="About">
+          <p>
+            Hello! I am <strong>web</strong> and <strong>entertainment</strong>
+            enthusiast based in Sombor, Serbia.
+          </p>
+        </InfoBox>
+        <InfoBox heading="Goal">
+          <p>
+            I <abbr title="sadly, past tense 😢">liked</abbr> to design beautiful
+            &amp; unique websites, user interfaces using accessibility &amp; usability
+            guidelines for rich user experience.
+          </p>
+        </InfoBox>
+        <InfoBox heading="Availability">
+          <p>I'm <i>kind of</i> not available for work, at the moment.</p>
+          <p>
+            <a href="/contact">Get in touch!</a><br /><span
+              class="smaller-text color-gray-600"
+              >(currently, nothing to see there <span
+                role="img"
+                aria-label="Skull emoji">💀</span
+              >)</span
+            >
+          </p>
+        </InfoBox>
+      </div>
+    </section>
 
     <Slider />
 
-    <section class="row">
+    <section class="greatness breathe">
       <h3>
         Pro bono? <span
           role="img"

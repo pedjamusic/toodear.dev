@@ -12,9 +12,9 @@ while (astroVersion.charAt(0) === "^") {
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="row">
+<footer class="breathe limit-width center">
   <h3>Meanwhile, elsewhere...</h3>
-  <ul class="mb-4">
+  <ul>
     <li>
       <a href="https://www.instagram.com/toodearrocks/">Instagram</a>
     </li>
@@ -30,14 +30,14 @@ const currentYear = new Date().getFullYear();
       <a href="https://www.facebook.com/toodearrocks">Facebook</a>
     </li>
   </ul>
-  <p class="text-base text-color-gray">
+  <p class="copyright">
     Copyright &amp; copyleft from 2006. to {currentYear} by Predrag Drljača.<br
     />
     Made with <span role="img" aria-label="suffering emoji">🥵</span> &amp; <span
       role="img"
       aria-label="heart emoji">❤️</span
     > using <a href="https://astro.build" title="Link to AstroJS website"
-      ><Image src={astroLogo} alt="AstroJS logo" class="inline size-20" /></a
+      ><Image src={astroLogo} alt="AstroJS logo" width="80" /></a
     >
     {astroVersion}.
   </p>
