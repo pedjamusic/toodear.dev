@@ -1,6 +1,6 @@
 /* TOODEAR.ROCKS @ https://toodear.vercel.app */
 
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 @import "./theme.css";
 
 :root {
@@ -63,16 +63,18 @@ a {
   text-decoration-color: var(--color-primary);
   text-decoration-thickness: 0.25rem;
   text-underline-offset: 0.25rem;
-  transition: all 0.1s ease-in-out;
 
-  /* So it does not flash after :hover (when removing pointer from the hyperlink) */
+  /* Below is to avoid flash after :hover (when removing pointer from the hyperlink) */
   background: linear-gradient(to bottom, var(--gradient-colors)) text;
   -webkit-background-clip: text;
-  background-clip: text;
+  background-clip: text; /* Keeping for now, for clarity due to changing how link is styled; was only color on a, but due to transition requires "overlay" */
   -webkit-text-fill-color: var(--color-text); /* matches normal color */
+
+  transition: -webkit-text-fill-color 0.15s ease-in-out,
+    text-decoration-color 0.75s ease-in-out;
 }
 a:hover {
-  background: linear-gradient(to bottom, var(--gradient-colors)) text;
+  /* background: linear-gradient(to bottom, var(--gradient-colors)) text; */
   -webkit-text-fill-color: transparent;
   text-decoration-color: var(--color-secondary);
 }
@@ -80,8 +82,6 @@ abbr:hover {
   cursor: help;
 }
 figcaption {
-  font-size: calc(var(--text-base) * 0.875);
-  color: oklch(from var(--color-gray) calc(l + 0.2) c h);
   line-height: 1.33;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
@@ -104,6 +104,13 @@ h2 {
 h3 {
   font-size: 1.5rem;
   line-height: 1.33;
+}
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 p,
 li {
@@ -166,6 +173,15 @@ strong {
 }
 .center {
   margin-inline: auto;
+}
+.color-gray-400 {
+  color: var(--color-gray);
+}
+.color-gray-500 {
+  color: oklch(from var(--color-gray) calc(l + 0.1) c h);
+}
+.color-gray-600 {
+  color: oklch(from var(--color-gray) calc(l + 0.2) c h);
 }
 .copyright {
   margin-top: 1rem;
@@ -242,4 +258,8 @@ strong {
     width: 66.666667%;
     padding-block: 2rem 0;
   }
+}
+
+.smaller-text {
+  font-size: 0.75em;
 }
